@@ -24,9 +24,9 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener() {
             scope.launch {
                 repeat(100) {
-                    (100-it).toString().run {
+                    (100 - it).toString().run {
                         Log.d("Countdown", this)
-                        withContext(Dispatchers.Main) {textView.text = this@run}
+                        withContext(Dispatchers.Main) { textView.text = this@run }
                     }
                     delay(1000)
                 }
@@ -34,3 +34,4 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+}
